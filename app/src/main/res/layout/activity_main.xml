@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#4CAF50"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnCashMgt"
+        android:layout_width="215dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="126dp"
+        android:background="@drawable/custom_btn"
+        android:text="CASH MANAGEMENT"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtCashDrawer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16000003" />
+
+    <Button
+        android:id="@+id/btnShift"
+        android:layout_width="215dp"
+        android:layout_height="54dp"
+        android:background="@drawable/custom_btn"
+        android:text="CLOSE SHIFT"
+        android:textColor="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.267" />
+
+    <TextView
+        android:id="@+id/txtShiftNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="40dp"
+        android:text="Shift Number: "
+        app:layout_constraintStart_toStartOf="@+id/btnCashMgt"
+        app:layout_constraintTop_toBottomOf="@+id/btnCashMgt" />
+
+    <TextView
+        android:id="@+id/txtShiftOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Shift Opened: "
+        app:layout_constraintEnd_toEndOf="@+id/txtShiftNo"
+        app:layout_constraintTop_toBottomOf="@+id/txtShiftNo" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:hint="MM/DD/YY hh:mm a"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/txtShiftOpen"
+        app:layout_constraintStart_toStartOf="@+id/btnShift"
+        app:layout_constraintTop_toTopOf="@+id/txtShiftOpen"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtCashDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="125dp"
+        android:text="Cash drawer"
+        android:textAllCaps="false"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtShiftOpen"
+        app:layout_constraintTop_toBottomOf="@+id/btnCashMgt" />
+
+    <TextView
+        android:id="@+id/txtStartCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Starting Cash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtCashDrawer"
+        app:layout_constraintTop_toBottomOf="@+id/txtDate" />
+
+    <TextView
+        android:id="@+id/txtStartingCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000,000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtDate"
+        app:layout_constraintTop_toBottomOf="@+id/txtShiftOpen" />
+
+    <TextView
+        android:id="@+id/tstPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="30dp"
+        android:text="Cash payments"
+        app:layout_constraintStart_toStartOf="@+id/txtStartCash"
+        app:layout_constraintTop_toBottomOf="@+id/txtStartCash" />
+
+    <TextView
+        android:id="@+id/txtCashRefunds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:text="Cash Refunds"
+        app:layout_constraintBottom_toTopOf="@+id/txtPaidInLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtPaidInLabel" />
+
+    <TextView
+        android:id="@+id/txtPaidInLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:text="Paid In"
+        app:layout_constraintBottom_toTopOf="@+id/txtPayOutLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtPayOutLabel" />
+
+    <TextView
+        android:id="@+id/txtPayOutLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="Pay out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tstPayments"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tstPayments" />
+
+    <TextView
+        android:id="@+id/txtPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:text="3,028.00"
+        app:layout_constraintBottom_toTopOf="@+id/txtRefunds"
+        app:layout_constraintEnd_toEndOf="@+id/txtStartingCash" />
+
+    <TextView
+        android:id="@+id/txtRefunds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:text="00,000.00"
+        app:layout_constraintBottom_toTopOf="@+id/txtPaidin"
+        app:layout_constraintEnd_toEndOf="@+id/txtPayments" />
+
+    <TextView
+        android:id="@+id/txtPaidin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="00,000.00"
+        app:layout_constraintBottom_toTopOf="@+id/txtPaidout"
+        app:layout_constraintEnd_toEndOf="@+id/txtRefunds" />
+
+    <TextView
+        android:id="@+id/txtPaidout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
+        android:text="00,000.00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtPaidin" />
+</androidx.constraintlayout.widget.ConstraintLayout>
